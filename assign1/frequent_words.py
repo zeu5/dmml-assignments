@@ -112,16 +112,6 @@ class WordSet:
         return "Count = " + str(self.count) + ", Words = " + ",".join(words)
 
 def frequent_sets(words, word_doc_map, k , f):
-    
-    def get_count(word_set):
-        count = 0
-        for doc, doc_words in word_doc_map.items():
-            for word in word_set.get_words():
-                if word.id not in doc_words:
-                    break
-            else:
-                count = count + 1
-        return count
         
     def differ_by_one(word_set1, word_set2):
         k = word_set1.k
