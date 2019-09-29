@@ -102,3 +102,12 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Ignore the data folder
+data/
+
+# Apple files
+*/.DS_Store
+
+# VS Code files
+*/.vscode
