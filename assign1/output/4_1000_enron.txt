@@ -1,0 +1,80 @@
+Program statistics
+------------------
+
+87.51 real        86.47 user         0.84 sys
+ 477020160  maximum resident set size
+         0  average shared memory size
+         0  average unshared data size
+         0  average unshared stack size
+    118581  page reclaims
+        97  page faults
+         0  swaps
+         0  block input operations
+         0  block output operations
+         0  messages sent
+         0  messages received
+         0  signals received
+        44  voluntary context switches
+      9519  involuntary context switches
+
+Output
+------
+
+Generating frequent sets ...
+Generating 2 candidate sets ...
+Generating 3 candidate sets ...
+Generating 4 candidate sets ...
+Size of frequent sets :  52
+The frequent sets are : 
+Count = 1064, Words = business,companies,company,market
+Count = 1058, Words = business,energy,market,power
+Count = 1062, Words = california,cost,electricity,power
+Count = 1029, Words = california,cost,energy,market
+Count = 1156, Words = california,cost,energy,power
+Count = 1115, Words = california,cost,market,power
+Count = 1012, Words = california,cost,market,price
+Count = 1007, Words = california,cost,power,price
+Count = 1005, Words = california,cost,power,states
+Count = 1027, Words = california,cost,power,utilities
+Count = 1028, Words = california,electricity,energy,market
+Count = 1189, Words = california,electricity,energy,power
+Count = 1096, Words = california,electricity,market,power
+Count = 1004, Words = california,electricity,power,price
+Count = 1017, Words = california,electricity,power,prices
+Count = 1058, Words = california,electricity,power,states
+Count = 1014, Words = california,electricity,power,utilities
+Count = 1256, Words = california,energy,market,power
+Count = 1058, Words = california,energy,market,price
+Count = 1039, Words = california,energy,market,prices
+Count = 1007, Words = california,energy,month,power
+Count = 1106, Words = california,energy,power,price
+Count = 1084, Words = california,energy,power,prices
+Count = 1102, Words = california,energy,power,states
+Count = 1063, Words = california,energy,power,utilities
+Count = 1007, Words = california,energy,power,utility
+Count = 1134, Words = california,market,power,price
+Count = 1108, Words = california,market,power,prices
+Count = 1012, Words = california,market,power,states
+Count = 1017, Words = california,market,power,utilities
+Count = 1018, Words = california,market,price,prices
+Count = 1013, Words = california,power,price,prices
+Count = 1049, Words = company,energy,market,power
+Count = 1061, Words = cost,electricity,energy,power
+Count = 1132, Words = cost,energy,market,power
+Count = 1010, Words = cost,energy,market,price
+Count = 1021, Words = cost,energy,power,price
+Count = 1009, Words = cost,energy,power,prices
+Count = 1060, Words = cost,market,power,price
+Count = 1028, Words = cost,market,power,prices
+Count = 1127, Words = electricity,energy,market,power
+Count = 1009, Words = electricity,energy,power,price
+Count = 1011, Words = electricity,energy,power,prices
+Count = 1023, Words = electricity,energy,power,states
+Count = 1000, Words = electricity,market,power,price
+Count = 1003, Words = electricity,market,power,prices
+Count = 1012, Words = energy,market,month,power
+Count = 1210, Words = energy,market,power,price
+Count = 1121, Words = energy,market,power,prices
+Count = 1038, Words = energy,market,price,prices
+Count = 1018, Words = energy,power,price,prices
+Count = 1085, Words = market,power,price,prices
