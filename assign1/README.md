@@ -10,7 +10,7 @@ The above command runs the code. Run it with `time -l` to get run time.
 
 ## Output
 
-The repository is at - [Github link](https://github.com/zeu5/dmml-assignments/tree/master/assign1/output)
+The output is at - [Github link](https://github.com/zeu5/dmml-assignments/tree/master/assign1/output)
 
 The output files are in `output/` directory. The filename contains the parameters used. For example `4_1000_nips.txt` contains the output for the parameters of `k` as `4`, `f` as `1000` and `collection` as `nips`. 
 
