@@ -1,10 +1,10 @@
 import sys
 import csv
-from numpy import mean, array
 from sklearn import tree, svm
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import cross_val_score
 from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import make_pipeline
 
 NUM_ATTRIBUTES = 42
 ATTRIBUTE_VALUE_MAP = {
@@ -43,21 +43,21 @@ def main():
     print("Fetched data set")
 
     decision_tree_classifier = tree.DecisionTreeClassifier(min_samples_split=250)
-    svm_classifier = svm.SVC()
+    svm_classifier = make_pipeline(StandardScaler(), svm.LinearSVC())
     naive_bayes_classifier = MultinomialNB()
 
-    print("Evaluating classifiers")
+    print("Evaluating classifiers with 10 fold cross validation")
     
     decision_tree_scores = cross_val_score(decision_tree_classifier, data, target, cv=10)
-    print("Decision tree mean score : ", mean(array(decision_tree_scores)))
+    print("Decision tree mean score : ", decision_tree_scores.mean())
 
     naive_bayes_scores = cross_val_score(naive_bayes_classifier, data, target, cv=10)
-    print("Naive Bayes mean score : ", mean(array(naive_bayes_scores)))
+    print("Naive Bayes mean score : ", naive_bayes_scores.mean())
 
-    # scaler = StandardScaler()
-    # scaled_data = scaler.fit_transform(data)
-    # svm_scores = cross_val_score(svm_classifier, scaled_data, target, cv=10)
-    # print("SVM mean score : ", mean(array(svm_scores)))
+    # Linear SVM classifier fails to converge descpite high iterations. 
+    # Hence the output file does not contain the output of the following code segment.
+    svm_scores = cross_val_score(svm_classifier, data, target, cv=10)
+    print("SVM mean score : ", svm_scores.mean())
     
 
 if __name__ == "__main__":
