@@ -4,7 +4,7 @@ import numpy
 from sklearn import tree, svm
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import cross_val_score
-
+from sklearn.preprocessing import StandardScaler
 
 NUM_ATTRIBUTES = 42
 ATTRIBUTE_VALUE_MAP = {
@@ -40,13 +40,18 @@ def readData():
 
 def main():
     data, target = readData()
+    print("Fetched data set")
 
     decision_tree_classifier = tree.DecisionTreeClassifier(min_samples_split=250)
-    svm_classifier = svm.LinearSVC()
+    svm_classifier = svm.SVC()
     naive_bayes_classifier = MultinomialNB()
 
-    decision_tree_scores = cross_val_score(decision_tree_classifier, data, target, cv=10)
-    print(numpy.mean(numpy.array(decision_tree_scores)))
+    scaler = StandardScaler()
+    scaled_data = scaler.fit_transform(data)
+
+    print("Evaluating classifiers")
+    svm_scores = cross_val_score(svm_classifier, data, target, cv=10)
+    print(numpy.mean(numpy.array(svm_scores)))
     
 
 if __name__ == "__main__":
