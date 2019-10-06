@@ -22,5 +22,5 @@ Output
 
 Fetched data set
 Evaluating classifiers
-Decision tree mean score :  0.5864067362418313
+Decision tree mean score :  0.6583033646688725
 Naive Bayes mean score :  0.6583033646688725

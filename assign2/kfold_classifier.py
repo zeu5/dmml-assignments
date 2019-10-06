@@ -42,8 +42,8 @@ def main():
     data, target = readData()
     print("Fetched data set")
 
-    decision_tree_classifier = tree.DecisionTreeClassifier(min_samples_split=250)
-    svm_classifier = make_pipeline(StandardScaler(), svm.LinearSVC())
+    decision_tree_classifier = tree.DecisionTreeClassifier(min_samples_split=30000)
+    svm_classifier = make_pipeline(StandardScaler(), svm.LinearSVC(max_iter=10000))
     naive_bayes_classifier = MultinomialNB()
 
     print("Evaluating classifiers with 10 fold cross validation")
