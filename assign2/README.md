@@ -4,7 +4,7 @@ Building Decision tree, SVM and Naive Bayes classifier to predict win, lose or d
 
 ## Running the code
 
-The external packages used are `sklearn`. To run the code - `python3 kfold_classifier.py` 
+The external packages used are `sklearn` and `numpy`. To run the code - `python3 kfold_classifier.py` 
 
 ## Output
 

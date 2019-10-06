@@ -1,6 +1,6 @@
 import sys
 import csv
-import numpy
+from numpy import mean, array
 from sklearn import tree, svm
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import cross_val_score
@@ -46,12 +46,18 @@ def main():
     svm_classifier = svm.SVC()
     naive_bayes_classifier = MultinomialNB()
 
-    scaler = StandardScaler()
-    scaled_data = scaler.fit_transform(data)
-
     print("Evaluating classifiers")
-    svm_scores = cross_val_score(svm_classifier, data, target, cv=10)
-    print(numpy.mean(numpy.array(svm_scores)))
+    
+    decision_tree_scores = cross_val_score(decision_tree_classifier, data, target, cv=10)
+    print("Decision tree mean score : ", mean(array(decision_tree_scores)))
+
+    naive_bayes_scores = cross_val_score(naive_bayes_classifier, data, target, cv=10)
+    print("Naive Bayes mean score : ", mean(array(naive_bayes_scores)))
+
+    # scaler = StandardScaler()
+    # scaled_data = scaler.fit_transform(data)
+    # svm_scores = cross_val_score(svm_classifier, scaled_data, target, cv=10)
+    # print("SVM mean score : ", mean(array(svm_scores)))
     
 
 if __name__ == "__main__":
