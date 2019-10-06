@@ -54,7 +54,7 @@ def main():
     naive_bayes_scores = cross_val_score(naive_bayes_classifier, data, target, cv=10)
     print("Naive Bayes mean score : ", naive_bayes_scores.mean())
 
-    # Linear SVM classifier fails to converge descpite high iterations. 
+    # Linear SVM classifier fails to converge despite high iterations. 
     # Hence the output file does not contain the output of the following code segment.
     svm_scores = cross_val_score(svm_classifier, data, target, cv=10)
     print("SVM mean score : ", svm_scores.mean())
