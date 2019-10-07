@@ -1,21 +1,21 @@
 Program statistics
 ------------------
 
-10.84 real        12.12 user         0.59 sys
- 167837696  maximum resident set size
+10053.26 real      7611.41 user        48.96 sys
+ 192847872  maximum resident set size
          0  average shared memory size
          0  average unshared data size
          0  average unshared stack size
-     90189  page reclaims
-         0  page faults
+    288205  page reclaims
+      1048  page faults
          0  swaps
          0  block input operations
          0  block output operations
          0  messages sent
          0  messages received
          0  signals received
-         1  voluntary context switches
-     13551  involuntary context switches
+      1076  voluntary context switches
+   7132783  involuntary context switches
 
 Output
 ------
