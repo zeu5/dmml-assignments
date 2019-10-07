@@ -24,4 +24,4 @@ Fetched data set
 Evaluating classifiers
 Decision tree mean score :  0.6583033646688725
 Naive Bayes mean score :  0.6583033646688725
-SVM mean score :  0.6510202915842829
+SVM mean score :  0.6517753492561597
